@@ -17,7 +17,7 @@ export class TasksService {
         try {
             return await query.getMany()
         } catch (error) {
-            return new NotFoundException('Nenhuma tarefa encontrada')
+            throw new NotFoundException('Nenhuma tarefa encontrada')
         }
     }
 
